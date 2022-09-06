@@ -1,13 +1,13 @@
 FROM centos:latest
-MAINTAINER rizwan.rizwan@gmail.com
+MAINTAINER ritztechs@gmail.com
 RUN yum install -y httpd \
   zip \
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page282/metal.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page280/medi.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip metal.zip
-RUN cp -rvf metal/* .
-RUN rm -rf metal metal.zip
-CMD ["/usr/sbin/httpd", "-D",  "FOREGROUND"]
+RUN unzip medi.zip
+RUN cp -rvf medi/* .
+RUN rm -rf medi medi.zip
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
   
